@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hola JavaScrip</title>
+</head>
+<body>
+    <h1>Hola mundo en Java Scrip</h1>
+    
+    <script>
+        //window.lert("hola mundo")
+        //var nombre = window.prompt("¿cual es tu nombre?")
+        //window.confirm("hola " + nombre +"quiqueres aprender mas JS")
+        window.document.write('<h1 style="color:red;">me gusta java scrip</h1>')
+        //window.console.log('hola consola')
+         var lenguajes = ['html','css','JavaScrip','php']
+         var otros=['c++','java','python']
+
+
+        document.write('lenguajes <br>')
+        imprimir(lenguajes)
+        document.write('otros <br>')
+        imprimir(otros)
+        //ejemplo de concatenar
+            imprimir(lenguajes.concat(otros))
+         //imprimir(lenguajes)
+         function imprimerenglon(elemento,indice,arreglo)
+         {  
+                document.write('<tr>')
+                document.write('<td style="border:solid">')
+                document.write(indice);
+                document.write('</td>')
+
+                document.write('<td style="border:solid">')
+                document.write(arreglo[indice] );
+                document.write('</td>')
+                document.write('</tr>')
+         }
+
+         function imprimir(tabla)
+         {
+            document.write('<table>')
+            //for(var i=0; i< tabla.length;i++)
+           /* for(var x in tabla)
+            {
+                document.write('<tr>')
+                document.write('<td style="border:solid">')
+                document.write(x);
+                document.write('</td>')
+
+                document.write('<td style="border:solid">')
+                document.write(tabla[x] );
+                document.write('</td>')
+                document.write('</tr>')
+            }*/
+            tabla.forEach(imprimerenglon)
+            otros.forEach(imprimerenglon)
+         }
+          
+        
+
+    </script>
+</body>
+</html>
